@@ -1,0 +1,27 @@
+CREATE DATABASE banco_de_dados_seg;
+
+USE banco_de_dados_seg;
+
+-- Tabela Usuario
+CREATE TABLE USUARIO(
+	id_usuario INT PRIMARY KEY AUTO_INCREMENT,
+    email VARCHAR(50) NOT NULL,
+    senha VARCHAR(65) NOT NULL
+);
+
+-- Tabela Files
+CREATE TABLE FILES(
+	id_file INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(50) NOT NULL,
+    dados BLOB NOT NULL
+);
+
+-- Foreign Keys
+ALTER TABLE FILES
+ADD COLUMN id_usuario INT NOT NULL,
+ADD CONSTRAINT fk_usuario_file
+	FOREIGN KEY (id_usuario)
+	REFERENCES USUARIO(id_usuario);
+
+SELECT * FROM FILES;
+SELECT * FROM USUARIO;
