@@ -1,0 +1,27 @@
+# .gitlab-ci.yml
+
+stages:
+  - build
+  - test
+  - deploy
+
+variables:
+  # Defina as variáveis necessárias, como chaves de API, URLs, etc.
+
+before_script:
+  # Comandos executados antes de cada job
+
+build:
+  stage: build
+  script:
+    - echo "Construindo o código..."
+
+test:
+  stage: test
+  script:
+    - echo "Executando testes..."
+
+deploy:
+  stage: deploy
+  script:
+    - echo "Implantando o código..."
