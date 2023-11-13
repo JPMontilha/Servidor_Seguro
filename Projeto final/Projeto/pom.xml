@@ -37,7 +37,8 @@
         <repository>
             <id>github</id>
             <url>https://maven.pkg.github.com/JPMontilha/Servidor_Seguro</url>
+            <uniqueVersion>false</uniqueVersion>
+            <!-- Add any other necessary configuration here -->
         </repository>
     </distributionManagement>
 </project>
-
